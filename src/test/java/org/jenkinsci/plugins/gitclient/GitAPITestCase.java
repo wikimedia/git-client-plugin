@@ -558,7 +558,7 @@ public abstract class GitAPITestCase extends TestCase {
         w.checkout("tests/getSubmodules");
         w.git.submoduleInit();
 
-        assertEquals("git://github.com/puppetlabs/puppetlabs-firewall.git", w.igit().getSubmoduleUrl("modules/firewall"));
+        assertEquals("https://github.com/puppetlabs/puppetlabs-firewall.git", w.igit().getSubmoduleUrl("modules/firewall"));
 
         try {
             w.igit().getSubmoduleUrl("bogus");
